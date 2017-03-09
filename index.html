@@ -15,40 +15,82 @@
     <!-- Prepare the DOM element to be held by eCharts -->
     <div id="main1" style="width: 700px;height:400px;"></div>
     <div id="main2" style="width: 900px;height:400px;"></div>
-
+    <div id="main3" style="width: 900px;height:400px;"></div>
+   
     <script type="text/javascript">
+       option = {
+     title : {
+        text: 'No. of registered electors in 2007 - 2016',
+          x:'right'
+    },
+					color: ['#ff3d3d', '#00a0e9', '#f603ff','#00b419','#5f52a0'],
+					tooltip: {
+						trigger: 'axis'
+					},
+					legend: {
+					    orient: 'vertical',
+						x: 'left',
+						padding: [10, 20,0,20],
+						data:['registered electors of functional constituencies','registered electors of geographical constituencies'],
+						selected: {
+							'registered electors of functional constituencies': true,
 
-        option = {
-            "title": {
-                "text": "Sex profile of registered electors by geographical constituencies in 2016",
-            },
-            "xAxis": [{
-                "type": "category",
-                "data": [
-                   2016
-                ],
-                "axisTick": {
-                    "alignWithLabel": true
-                }
-            }],
-            "yAxis": [{
-                "type": "value"
-            }],
-            "series": [{
-                "name": "Male",
-                "type": "bar",
-                "data": [
-                    1853977           
-                ],
-            }, {
-                "name": "Female",
-                "type": "bar",
-                "data": [
-                    1925108   
-                ],
-            }]
-        };
-
+							'registered electors of geographical constituencies': true,
+						}
+					},
+					grid: {
+						left: '0',
+						right: '3%',
+						bottom: '3%',
+						top:'13%',
+						containLabel: true
+					},
+					xAxis: {
+						type: 'category',
+						boundaryGap: false,
+						splitLine:{
+			                show: true,
+			                lineStyle:{
+			                    color:['#b1b1b1'],
+			                    type:'dashed'
+			                }
+			            },
+						data: ['2007','2008','2009','2010','2011','2012','2013','2014','2015','2016']
+					},
+					yAxis: {
+						splitLine:{
+			                show: true,
+			                lineStyle:{
+			                    color:['#b1b1b1'],
+			                    type:'dashed'
+			                }
+			            }
+					},
+					series: [
+						{
+							name:'registered electors of functional constituencies',
+							type:'line',
+							data:['212825', '229861', '226591', '225639', '243142', '240735', '238022', '232677', '229441','239724'],
+							label: {
+								normal: {
+									show: true,
+									position: 'top'
+								}
+							}
+						},
+						{
+							name:'registered electors of geographical constituencies',
+							type:'line',
+							data:['3295826','3372007','3373342','3431592','3560535','3466201','3471423','3507786','3693942','3779085'],
+							label: {
+								normal: {
+									show: true,
+									position: 'top'
+								}
+							}
+						},
+					]
+				};
 
         var myChart1 = echarts.init(document.getElementById('main1'));
         myChart1.setOption(option);
@@ -92,6 +134,51 @@
 };
            var myChart2 = echarts.init(document.getElementById('main2'));
         myChart2.setOption(option);
+
+option = {
+            "title": {
+                "text": "Sex profile of registered electors by geographical constituencies in 2016",
+                 x:'center'
+            },
+            	legend: {
+					    orient: 'vertical',
+						x: 'left',
+						padding: [10, 20, 0, 20],
+						data:['Male','Female'],
+						selected: {
+							'Male': true,
+							'Female': true,
+						}
+					},
+            "xAxis": [{
+                "type": "category",
+                "data": [
+                   2016
+                ],
+                "axisTick": {
+                    "alignWithLabel": true
+                }
+            }],
+            "yAxis": [{
+                "type": "value"
+            }],
+            "series": [{
+                "name": "Female",
+                "type": "bar",
+                "data": [
+                    1925108          
+                ],
+            }, {
+                "name": "Male",
+                "type": "bar",
+                "data": [
+                    1853977     
+                ],
+            }]
+        };
+
+var myChart3 = echarts.init(document.getElementById('main3'));
+        myChart3.setOption(option);
 
     </script>
 </body>
