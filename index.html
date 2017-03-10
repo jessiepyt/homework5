@@ -13,7 +13,7 @@
     <h2> By Jessie Pang </h2>
     <h3> Voter Registration Statistics (Geographical Constituency, Functional Constituency, Election Committee Subsector) </h3>
     <!-- Prepare the DOM element to be held by eCharts -->
-    <div id="main1" style="width: 700px;height:400px;"></div>
+    <div id="main1" style="width: 700px;height:600px;"></div>
     <div id="main2" style="width: 900px;height:400px;"></div>
     <div id="main3" style="width: 900px;height:400px;"></div>
     <div id="main4" style="width: 900px;height:700px;"></div>
@@ -23,7 +23,7 @@
                     title : {
                     text: 'No. of registered electors in 2007 - 2016',
                     x:'right'
-                    },
+                },
 					color: ['#ff3d3d', '#00a0e9', '#f603ff','#00b419','#5f52a0'],
 					tooltip: {
 						trigger: 'axis'
@@ -32,11 +32,11 @@
 					    orient: 'vertical',
 						x: 'left',
 						padding: [10, 20,0,20],
-						data:['registered electors of functional constituencies','registered electors of geographical constituencies'],
+						data:['registered electors of Functional Constituencies','registered electors of Geographical Constituencies','registered voters of Election Committee subsectors'],
 						selected: {
-							'registered electors of functional constituencies': true,
-
-							'registered electors of geographical constituencies': true,
+							'registered electors of Functional Constituencies': true,
+							'registered electors of Geographical Constituencies': true,
+                            'registered voters of Election Committee subsectors':true,
 						}
 					},
 					grid: {
@@ -69,7 +69,7 @@
 					},
 					series: [
 						{
-							name:'registered electors of functional constituencies',
+							name:'registered electors of Functional Constituencies',
 							type:'line',
 							data:['212825', '229861', '226591', '225639', '243142', '240735', '238022', '232677', '229441','239724'],
 							label: {
@@ -80,9 +80,20 @@
 							}
 						},
 						{
-							name:'registered electors of geographical constituencies',
+							name:'registered electors of Geographical Constituencies',
 							type:'line',
 							data:['3295826','3372007','3373342','3431592','3560535','3466201','3471423','3507786','3693942','3779085'],
+							label: {
+								normal: {
+									show: true,
+									position: 'top'
+								}
+							}
+						},
+                        	{
+							name:'registered voters of Election Committee subsectors',
+							type:'line',
+							data:['217496','234460','231140','230149','249554','246873','244217','239089','235848','246440'],
 							label: {
 								normal: {
 									show: true,
@@ -209,10 +220,10 @@ var myChart3 = echarts.init(document.getElementById('main3'));
     },
     yAxis: {
         type: 'category',
-        data: ['Heung Yee Kuk', 'Agriculture and Fisheries','Insurance','Transport','Education','Legal','Accountancy','Medical','Health Services','Engineering'
-        ,'Architectural, Surveying, Planning and Landscape','Labour','Social Welfare','Real Estate and Construction','Tourism','Commercial (First)','Commercial (Second)',
-        'Industrial (First)','Industrial (Second)','Finance','Financial Services','Sports, Performing Arts, Culture and Publication', 'Import and Export','Textiles and Garment',
-        'Wholesale and Retail','Information Technology','Catering','District Council (First)' ]
+        data: ['Heung Yee Kuk', 'Agriculture and Fisheries', 'Insurance', 'Transport', 'Education', 'Legal', 'Accountancy', 'Medical', 'Health Services', 'Engineering', 
+        'Architectural, Surveying, Planning and Landscape','Labour', 'Social Welfare', 'Real Estate and Construction','Tourism', 'Commercial (First)', 'Commercial (Second)',
+        'Industrial (First)', 'Industrial (Second)', 'Finance', 'Financial Services', 'Sports, Performing Arts, Culture and Publication', 'Import and Export', 'Textiles and Garment',
+        'Wholesale and Retail', 'Information Technology', 'Catering', 'District Council (First)' ]
     },
     series: [
         {
