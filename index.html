@@ -16,13 +16,14 @@
     <div id="main1" style="width: 700px;height:400px;"></div>
     <div id="main2" style="width: 900px;height:400px;"></div>
     <div id="main3" style="width: 900px;height:400px;"></div>
-   
+    <div id="main4" style="width: 900px;height:700px;"></div>
+
     <script type="text/javascript">
        option = {
-     title : {
-        text: 'No. of registered electors in 2007 - 2016',
-          x:'right'
-    },
+                    title : {
+                    text: 'No. of registered electors in 2007 - 2016',
+                    x:'right'
+                    },
 					color: ['#ff3d3d', '#00a0e9', '#f603ff','#00b419','#5f52a0'],
 					tooltip: {
 						trigger: 'axis'
@@ -150,7 +151,7 @@ option = {
 							'Female': true,
 						}
 					},
-            "xAxis": [{
+               "xAxis": [{
                 "type": "category",
                 "data": [
                    2016
@@ -179,6 +180,70 @@ option = {
 
 var myChart3 = echarts.init(document.getElementById('main3'));
         myChart3.setOption(option);
+
+    option = {
+    title : {
+    text: 'Distribution of registered electors by functional constituencies in 2016',
+    x:'center'
+    },
+    tooltip : {
+        trigger: 'axis',
+        axisPointer : {            
+            type : 'shadow'        
+        }
+    },
+    legend: {
+        orient: 'vertical',
+        x: 'left',
+        padding: [10, 20,],
+        data: ['Bodies', 'Individuals']
+    },
+    grid: {
+        left: '3%',
+        right: '4%',
+        bottom: '3%',
+        containLabel: true
+    },
+    xAxis:  {
+        type: 'value'
+    },
+    yAxis: {
+        type: 'category',
+        data: ['Heung Yee Kuk', 'Agriculture and Fisheries','Insurance','Transport','Education','Legal','Accountancy','Medical','Health Services','Engineering'
+        ,'Architectural, Surveying, Planning and Landscape','Labour','Social Welfare','Real Estate and Construction','Tourism','Commercial (First)','Commercial (Second)',
+        'Industrial (First)','Industrial (Second)','Finance','Financial Services','Sports, Performing Arts, Culture and Publication', 'Import and Export','Textiles and Garment',
+        'Wholesale and Retail','Information Technology','Catering','District Council (First)' ]
+    },
+    series: [
+        {
+            name: 'Bodies',
+            type: 'bar',
+            stack: '总量',
+            label: {
+                normal: {
+                    show: true,
+                    position: 'insideRight'
+                }
+            },
+            data: [0,154,134,195,0,0,0,0,0,0,0,668,0,484,1426,1086,618,544,769,125,622,2525,865,2276,1853,404,1004,0]
+        },
+        {
+            name: 'Individuals',
+            type: 'bar',
+            stack: '总量',
+            label: {
+                normal: {
+                    show: true,
+                    position: 'insideRight'
+                }
+            },
+            data: [147,0,0,0,88185,6773,26008,11191,37423,9406,7371,0,13824,230,0,0,873,0,0,0,0,395,535,56,4874,11711,4539,431]
+        },
+    ]
+};
+
+var myChart4 = echarts.init(document.getElementById('main4'));
+        myChart4.setOption(option);
 
     </script>
 </body>
