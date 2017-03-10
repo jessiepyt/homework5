@@ -2,17 +2,16 @@
             "title": {
                 "text": "Sex profile of registered electors by geographical constituencies in 2016",
                  x:'center'
-            },
+                },
             	legend: {
-					    orient: 'vertical',
-						x: 'left',
-						padding: [10, 20, 0, 20],
-						data:['Male','Female'],
-						selected: {
-							'Male': true,
-							'Female': true,
-						}
-					},
+		orient: 'vertical',
+		x: 'left',
+		padding: [10, 20, 0, 20],
+		data:['Male','Female'],
+		selected: {'Male': true,
+			   'Female': true,
+			  }
+		},
                "xAxis": [{
                 "type": "category",
                 "data": [
