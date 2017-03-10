@@ -1,36 +1,41 @@
-{
-    "title": {
-        "text": "Sex profile of registered electors by geographical constituencies in 2016"
-    },
-    "legend": {
-        "data": ["Male", "Female"],
-        "align": "left",
-        "top": 20,
-        "left": 10
-    },
-    "xAxis": [{
-        "type": "category",
-        "data": [
-            2016
-        ],
-        "axisTick": {
-            "alignWithLabel": true
-        }
-    }],
-    "yAxis": [{
-        "type": "value"
-    }],
-    "series": [{
-        "name": "Male",
-        "type": "bar",
-        "data": [
-            1853977
-        ]
-    }, {
-        "name": "Female",
-        "type": "bar",
-        "data": [
-          1925108
-        ]
-    }]
-}
+ {
+            "title": {
+                "text": "Sex profile of registered electors by geographical constituencies in 2016",
+                 x:'center'
+            },
+            	legend: {
+					    orient: 'vertical',
+						x: 'left',
+						padding: [10, 20, 0, 20],
+						data:['Male','Female'],
+						selected: {
+							'Male': true,
+							'Female': true,
+						}
+					},
+               "xAxis": [{
+                "type": "category",
+                "data": [
+                   2016
+                ],
+                "axisTick": {
+                    "alignWithLabel": true
+                }
+            }],
+            "yAxis": [{
+                "type": "value"
+            }],
+            "series": [{
+                "name": "Female",
+                "type": "bar",
+                "data": [
+                    1925108          
+                ],
+            }, {
+                "name": "Male",
+                "type": "bar",
+                "data": [
+                    1853977     
+                ],
+            }]
+ };
