@@ -16,9 +16,9 @@
 	    
     <!-- Prepare the DOM element to be held by eCharts -->
     <div id="main1" style="width: 700px;height:400px;"></div>
-    <div id="main2" style="width: 900px;height:400px;"></div>
-    <div id="main3" style="width: 900px;height:400px;"></div>
-    <div id="main4" style="width: 900px;height:700px;"></div>
+    <div id="main2" style="width: 700px;height:400px;"></div>
+    <div id="main3" style="width: 700px;height:400px;"></div>
+    <div id="main4" style="width: 900px;height:750px;"></div>
 
     <script type="text/javascript">
       option = {
@@ -140,8 +140,8 @@
                         ],
                         "itemStyle": {
                             "emphasis": {
-                                "shadowBlur": 10,
-                                "shadowOffsetX": 0,
+                                "shadowBlur": "10",
+                                "shadowOffsetX": "0",
                                 "shadowColor": 'rgba(0, 0, 0, 0.5)'
                             }  
                         }
@@ -182,15 +182,16 @@
                 }
             },
             legend: {
-                orient: 'vertical',
                 x: 'left',
-                padding: [10, 20,],
+                orient:'vertical',
+                top: '20',
+                left: '0',
                 data: ['Bodies', 'Individuals']
             },
             grid: {
-                left: '3%',
-                right: '4%',
-                bottom: '3%',
+                left: '0%',
+                right: '5%',
+                bottom: '10%',
                 containLabel: true
             },
             xAxis:  {
@@ -202,7 +203,12 @@
                 'Health Services', 'Engineering', 'Architectural, Surveying, Planning and Landscape','Labour', 'Social Welfare', 
                 'Real Estate and Construction','Tourism', 'Commercial (First)', 'Commercial (Second)','Industrial (First)', 
                 'Industrial (Second)', 'Finance', 'Financial Services', 'Sports, Performing Arts, Culture and Publication', 'Import and Export',
-                'Textiles and Garment','Wholesale and Retail', 'Information Technology', 'Catering', 'District Council (First)' ]
+                'Textiles and Garment','Wholesale and Retail', 'Information Technology', 'Catering', 'District Council (First)' ],
+                axisLabel:{
+                    textStyle:{
+                        fontSize:12,
+                    },
+                },
             },
             series: [
                 {
@@ -226,7 +232,16 @@
                             position: 'insideRight'
                         }
                     },
-                    data: [147,0,0,0,88185,6773,26008,11191,37423,9406,7371,0,13824,230,0,0,873,0,0,0,0,395,535,56,4874,11711,4539,431]
+                    data: [147,0,0,0,88185,6773,26008,11191,37423,9406,7371,0,13824,230,0,0,873,0,0,0,0,395,535,56,4874,11711,4539,431],
+                    "markPoint":{
+                        "data":[
+                            {
+                                "type":"max",
+                                "name":"Maximum",
+                                "symbolRotate":"-90"
+                            },
+                            ],
+                        },
                 },
                 ]
             };
