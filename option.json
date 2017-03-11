@@ -1,6 +1,7 @@
 {
     "title": {
-        "text": "Sex profile of registered electors by geographical constituencies in 2016"
+        "text": "                       Sex profile of registered electors by geographical constituencies in 2016",
+        "x":"center"
     },
     "legend": {
         "data": ["Male", "Female"],
