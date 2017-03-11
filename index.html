@@ -13,30 +13,6 @@
     <h1> Post-Occupy surge in voters during Hong Kong’s 2016 Legco elections </h1>
     <h2> Hong Kong political engagment in Lego election continue to rise</h2>
     <h3> By Jessie Pang </h3>
-    <p1> According to the latest statistics in the data.gov.hk, there are now 3,779,085 registered electors in geographical constituencies,
-         a net increase of 312,884 electors since the last Legco lection in 2012. </p1>
-    <br>
-    <br>
-    <p2> The Legco elections were the first since the pro-democracy Occupy protests in 2014, 
-         and returned six young lawmakers advocating self-determination for Hong Kong, 
-         including student activist Nathan Law Kwun-chung. </p2>
-    <br>
-    <br>
-    <p3> Among the registered electors in geographical constituencies, New Territories West has the highest no. of registered electors (1,086,511).
-         Meanwhile, female voters slightly outnumber male voters by 3.8%.  </p3>  
-    <br>
-    <br>
-    <p4> Although there was a decrease of registered electors in functional constituencies, the total no. gradually rise back to 239,724 as the election approached.
-         Among the registered electors in functional constituencies,education sector has the highest no. of voters (88,185). The sector’s lawmaker said that although this may
-         be due to vote-rigging activities, he believed the increase in the number of voters was still a good thing. <p4>
-    <br>
-    <br>
-    <p5> Political scientist Dr Chung Kim-wah, of Polytechnic University’s Centre for Social Policy Studies, said Hong Kong people political engagment in election
-         has risen as they have a stronger political indenity since the Occupy Movement in 2014. </p5>
-    <br>
-    <br>
-    <p6> “They now care about politics; want to devote themselves to social movements; and want to change the game rules,” Chung said. 
-    “But it remains to be seen whether their passion, and the trend [of the rising turnout], can be sustained.” </p6>
 	    
     <!-- Prepare the DOM element to be held by eCharts -->
     <div id="main1" style="width: 700px;height:600px;"></div>
@@ -120,8 +96,19 @@
 
         var myChart1 = echarts.init(document.getElementById('main1'));
         myChart1.setOption(option);
-
-            option = {
+	    </script>
+	    
+	    <br>
+	    <p1> According to the latest statistics in the data.gov.hk, there are now 3,779,085 registered electors in geographical constituencies,
+         a net increase of 312,884 electors since the last Legco lection in 2012. </p1>
+	    <br>
+	    <br>
+	    <p2> The Legco elections were the first since the pro-democracy Occupy protests in 2014, and returned six young lawmakers advocating self-determination for Hong Kong, 
+         including student activist Nathan Law Kwun-chung. </p2>
+	    <br>
+	    
+        <script type="text/javascript">
+        option = {
         title : {
         text: 'Distribution of registered electors by geographical constituencies in 2016',
         x:'center'
@@ -160,7 +147,9 @@
 };
            var myChart2 = echarts.init(document.getElementById('main2'));
         myChart2.setOption(option);
-
+	    </script>
+	     
+            <script type="text/javascript">
 	      $(function() {
             $.getJSON('option.json', function(data) {
                 var option = data;  
@@ -168,7 +157,13 @@
                 myChart3.setOption(option);
             })
         });    
-
+             </script>
+	
+	 <br>   
+	 <p3> Among the registered electors in geographical constituencies, New Territories West has the highest no. of registered electors (1,086,511).
+         Meanwhile, female voters slightly outnumber male voters by 3.8%.  </p3>  
+         <br>
+	    <script type="text/javascript">
     option = {
     title : {
     text: 'Distribution of registered electors by functional constituencies in 2016',
@@ -232,8 +227,20 @@
 
 var myChart4 = echarts.init(document.getElementById('main4'));
         myChart4.setOption(option);
-    
     </script>
+	
+    <br>
+    <p4> Although there was a decrease of registered electors in functional constituencies, the total no. gradually rise back to 239,724 as the election approached.
+         Among the registered electors in functional constituencies,education sector has the highest no. of voters (88,185). The sector’s lawmaker said that although this may
+         be due to vote-rigging activities, he believed the increase in the number of voters was still a good thing. <p4>
+    <br>
+    <br>
+    <p5> Political scientist Dr Chung Kim-wah, of Polytechnic University’s Centre for Social Policy Studies, said Hong Kong people political engagment in election
+         has risen as they have a stronger political indenity since the Occupy Movement in 2014. </p5>
+    <br>
+    <br>
+    <p6> “They now care about politics; want to devote themselves to social movements; and want to change the game rules,” Chung said. 
+    “But it remains to be seen whether their passion, and the trend [of the rising turnout], can be sustained.” </p6>
 	    
 </body>
 </html>
