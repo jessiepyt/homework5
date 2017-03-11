@@ -7,20 +7,48 @@
     <!-- Use echarts.js -->
     <script src="echarts.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
+    <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="My Skills Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
+    Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+    <script type="application/x-javascript">
+        addEventListener("load", function() {
+            setTimeout(hideURLbar, 0);
+        }, false);
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+    </script>
+    <script src="js/jquery-1.11.1.min.js"></script>
 </head>
 
 <body>
-    <h1> Post-Occupy surge in voters during Hong Kong’s 2016 Legco elections </h1>
-    <h2> Hong Kong political engagment in Lego election continue to rise</h2>
-    <h3> By Jessie Pang </h3>
-	    
-    <!-- Prepare the DOM element to be held by eCharts -->
-    <div id="main1" style="width: 700px;height:400px;"></div>
-    <div id="main2" style="width: 700px;height:400px;"></div>
-    <div id="main3" style="width: 700px;height:400px;"></div>
-    <div id="main4" style="width: 900px;height:750px;"></div>
+  <div class="header-section">
+        <div class="continer">
+        <h1> Post-Occupy surge in voters during Hong Kong’s 2016 Legco elections </h1>
+        <h2> Hong Kong political engagment in Lego election continue to rise</h2>
+        <h3> By Jessie Pang </h3>
+        </div>
+  </div>
 
-    <script type="text/javascript">
+  	<div class="row">
+          <div class="col-span-12"></div>
+	    <p1> According to the latest statistics in the data.gov.hk, there are now 3,779,085 registered electors in geographical constituencies,
+         a net increase of 312,884 electors since the last Legco lection in 2012. </p1>
+	    <br>
+	    <br>
+	    <p2> The Legco elections were the first since the pro-democracy Occupy protests in 2014, and returned six young lawmakers 
+        advocating self-determination for Hong Kong, including student activist Nathan Law Kwun-chung. </p2>
+	</div>
+
+   <div class="row">
+        <div class="col-md-2 col-md-offset-3">
+             <div id="main1" style="width: 700px;height:400px;"></div>
+             
+<script type="text/javascript">
       option = {
                     "title" : {
                         "text": "No. of registered electors in 2007-2016",
@@ -96,18 +124,19 @@
             var myChart1 = echarts.init(document.getElementById('main1'));
             myChart1.setOption(option);
 	</script>
-	    
+	</div>    
+
+    <div class="row">
+        <div class="col-span-12"> 
+        <p3> Among the registered electors in geographical constituencies, New Territories West has the highest no. of registered electors 
+            (1,086,511). </p3>
+        </div>
+    </div>
+
 	<div class="row">
-        <br>
-	    <p1> According to the latest statistics in the data.gov.hk, there are now 3,779,085 registered electors in geographical constituencies,
-         a net increase of 312,884 electors since the last Legco lection in 2012. </p1>
-	    <br>
-	    <br>
-	    <p2> The Legco elections were the first since the pro-democracy Occupy protests in 2014, and returned six young lawmakers 
-        advocating self-determination for Hong Kong, including student activist Nathan Law Kwun-chung. </p2>
-	    <br>
-	</div>
-	
+    <div class="col-md-2 col-md-offset-3">
+        <div id="main2" style="width: 700px;height:400px;"></div>
+
     <script type="text/javascript">
       option = {
           "title" : {
@@ -151,7 +180,18 @@
             var myChart2 = echarts.init(document.getElementById('main2'));
             myChart2.setOption(option);
     </script>
-	     
+    </div>
+
+    <div class="row">
+        <div class="col-span-12"> 
+        <p4> Meanwhile, female voters slightly outnumber male voters by 3.8%.  </p4>  
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-2 col-md-offset-3">
+              <div id="main3" style="width: 700px;height:400px;"></div>
+   
     <script type="text/javascript">
     $(function() {
         $.getJSON('option.json', function(data) {
@@ -163,13 +203,21 @@
     </script>
 
     <div class="row">
-        <br>   
-        <p3> Among the registered electors in geographical constituencies, New Territories West has the highest no. of registered electors (1,086,511).
-             Meanwhile, female voters slightly outnumber male voters by 3.8%.  </p3>  
-        <br>
+        <div class="col-span-12">
+        <p5> Although there was a decrease of registered electors in functional constituencies, the total no. gradually rise back to 239,724 as the
+             election approached.Among the registered electors in functional constituencies,education sector has the highest no. of voters (88,185). 
+             The sector’s lawmaker said that although this may be due to vote-rigging activities, he believed the increase in the number of voters 
+             was still a good thing. <p5>
+        </div>
     </div>
 
-	<script type="text/javascript">
+
+    <div class="row">
+        <div class="col-md-2 col-md-offset-3">
+            <div id="main4" style="width: 900px;height:750px;"></div>
+            
+            <script type="text/javascript">
+    
     option = {
           title : {
               text: 'Distribution of registered electors by functional constituencies in 2016',
@@ -249,20 +297,15 @@
             myChart4.setOption(option);
     </script>
 	
-    <div class="row">
-        <br>
-        <p4> Although there was a decrease of registered electors in functional constituencies, the total no. gradually rise back to 239,724 as the
-             election approached.Among the registered electors in functional constituencies,education sector has the highest no. of voters (88,185). 
-             The sector’s lawmaker said that although this may be due to vote-rigging activities, he believed the increase in the number of voters 
-             was still a good thing. <p4>
+ <div class="row">
+        <div class="col-span-12">
+        <p6> Political scientist Dr Chung Kim-wah, of Polytechnic University’s Centre for Social Policy Studies, said Hong Kong people 
+            political engagment in election has risen as they have a stronger political indenity since the Occupy Movement in 2014. </p6>
         <br>
         <br>
-        <p5> Political scientist Dr Chung Kim-wah, of Polytechnic University’s Centre for Social Policy Studies, said Hong Kong people 
-            political engagment in election has risen as they have a stronger political indenity since the Occupy Movement in 2014. </p5>
-        <br>
-        <br>
-        <p6> “They now care about politics; want to devote themselves to social movements; and want to change the game rules,” Chung said. 
-             “But it remains to be seen whether their passion, and the trend [of the rising turnout], can be sustained.” </p6>
-	</div>
+        <p7> “They now care about politics; want to devote themselves to social movements; and want to change the game rules,” Chung said. 
+             “But it remains to be seen whether their passion, and the trend [of the rising turnout], can be sustained.” </p7>
+        </div>
+ </div>
 </body>
 </html>
