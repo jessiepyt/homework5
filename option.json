@@ -24,13 +24,22 @@
         "name": "Male",
         "type": "bar",
         "data": [
-            1853977
+           1853977
         ]
     }, {
         "name": "Female",
         "type": "bar",
         "data": [
           1925108
-        ]
-    }]
+        ],
+        "markPoint":{
+            "data":[
+                {
+                    "type":"max",
+                    "name":"maxmax"
+                }
+            ]
+        }
+    }
+    ]
 }
