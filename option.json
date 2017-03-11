@@ -5,8 +5,9 @@
     },
     "legend": {
         "data": ["Male", "Female"],
+        "orient": "vertical",
         "align": "left",
-        "top": 20,
+        "top": 40,
         "left": 10
     },
     "xAxis": [{
