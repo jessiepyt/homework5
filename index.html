@@ -93,156 +93,161 @@
 						},
 					]
 				};
-
-        var myChart1 = echarts.init(document.getElementById('main1'));
-        myChart1.setOption(option);
-	    </script>
+            var myChart1 = echarts.init(document.getElementById('main1'));
+            myChart1.setOption(option);
+	</script>
 	    
-	    <div class="row">
-	    <br>
+	<div class="row">
+        <br>
 	    <p1> According to the latest statistics in the data.gov.hk, there are now 3,779,085 registered electors in geographical constituencies,
          a net increase of 312,884 electors since the last Legco lection in 2012. </p1>
 	    <br>
 	    <br>
-	    <p2> The Legco elections were the first since the pro-democracy Occupy protests in 2014, and returned six young lawmakers advocating self-determination for Hong Kong, 
-         including student activist Nathan Law Kwun-chung. </p2>
+	    <p2> The Legco elections were the first since the pro-democracy Occupy protests in 2014, and returned six young lawmakers 
+        advocating self-determination for Hong Kong, including student activist Nathan Law Kwun-chung. </p2>
 	    <br>
-	    </div>
+	</div>
 	
-        <script type="text/javascript">
-        option = {
-        title : {
-        text: 'Distribution of registered electors by geographical constituencies in 2016',
-        x:'center'
-    },
-    tooltip : {
-        trigger: 'item',
-        formatter: "{a} <br/>{b} : {c} ({d}%)"
-    },
-    legend: {
-        orient: 'vertical',
-        left: 'left',
-        data: ['Hong Kong Island','Kowloon West','Kowloon East','New Territories West','New Territories East']
-    },
-    series : [
-        {
-            "name": 'Geographical Constituency',
-            "type": 'pie',
-            "radius" : '55%',
-            "center": ['50%', '60%'],
-            "data":[
-                {value:627807, name:'Hong Kong Island'},
-                {value:488129, name:'Kowloon West'},
-                {value:601567, name:'Kowloon East'},
-                {value:1086511, name:'New Territories West'},
-                {value:975071, name:'New Territories East'}
-                ],
-                "itemStyle": {
-                 "emphasis": {
-                    "shadowBlur": 10,
-                    "shadowOffsetX": 0,
-                    "shadowColor": 'rgba(0, 0, 0, 0.5)'
-                }
-            }
-        }
-    ]
-};
-           var myChart2 = echarts.init(document.getElementById('main2'));
-        myChart2.setOption(option);
-	    </script>
+    <script type="text/javascript">
+      option = {
+          "title" : {
+              "text": "Distribution of registered electors by geographical constituencies in 2016",
+              "x":"center"
+            },
+            "tooltip" : {
+                "trigger": "item",
+                "formatter": "{a} <br/>{b} : {c} ({d}%)"
+            },
+            "legend": {
+                "orient": "vertical",
+                "align": "left",
+                "top": "20",
+                "left": "0",
+                "data": ["Hong Kong Island","Kowloon West","Kowloon East","New Territories West","New Territories East"]
+            },
+            "series" : [
+                {
+                    "name": "Geographical Constituency",
+                    "type": "pie",
+                    "radius" : "55%",
+                    "center": ["50%", "60%"],
+                    "data":[
+                        {"value":"627807", "name":"Hong Kong Island"},
+                        {"value":"488129", "name":"Kowloon West"},
+                        {"value":"601567", "name":"Kowloon East"},
+                        {"value":"1086511", "name":"New Territories West"},
+                        {"value":"975071", "name":"New Territories East"}
+                        ],
+                        "itemStyle": {
+                            "emphasis": {
+                                "shadowBlur": 10,
+                                "shadowOffsetX": 0,
+                                "shadowColor": 'rgba(0, 0, 0, 0.5)'
+                            }  
+                        }
+                    }
+                ]
+            };
+            var myChart2 = echarts.init(document.getElementById('main2'));
+            myChart2.setOption(option);
+    </script>
 	     
-            <script type="text/javascript">
-	      $(function() {
-            $.getJSON('option.json', function(data) {
-                var option = data;  
-                var myChart3 = echarts.init(document.getElementById('main3'));
-                myChart3.setOption(option);
+    <script type="text/javascript">
+    $(function() {
+        $.getJSON('option.json', function(data) {
+            var option = data;  
+            var myChart3 = echarts.init(document.getElementById('main3'));
+            myChart3.setOption(option);
             })
         });    
-             </script>
-	
-	 <br>   
-	 <p3> Among the registered electors in geographical constituencies, New Territories West has the highest no. of registered electors (1,086,511).
-         Meanwhile, female voters slightly outnumber male voters by 3.8%.  </p3>  
-         <br>
-	    <script type="text/javascript">
-    option = {
-    title : {
-    text: 'Distribution of registered electors by functional constituencies in 2016',
-    x:'center'
-    },
-    tooltip : {
-        trigger: 'axis',
-        axisPointer : {            
-            type : 'shadow'        
-        }
-    },
-    legend: {
-        orient: 'vertical',
-        x: 'left',
-        padding: [10, 20,],
-        data: ['Bodies', 'Individuals']
-    },
-    grid: {
-        left: '3%',
-        right: '4%',
-        bottom: '3%',
-        containLabel: true
-    },
-    xAxis:  {
-        type: 'value'
-    },
-    yAxis: {
-        type: 'category',
-        data: ['Heung Yee Kuk', 'Agriculture and Fisheries', 'Insurance', 'Transport', 'Education', 'Legal', 'Accountancy', 'Medical', 'Health Services', 'Engineering', 
-        'Architectural, Surveying, Planning and Landscape','Labour', 'Social Welfare', 'Real Estate and Construction','Tourism', 'Commercial (First)', 'Commercial (Second)',
-        'Industrial (First)', 'Industrial (Second)', 'Finance', 'Financial Services', 'Sports, Performing Arts, Culture and Publication', 'Import and Export', 'Textiles and Garment',
-        'Wholesale and Retail', 'Information Technology', 'Catering', 'District Council (First)' ]
-    },
-    series: [
-        {
-            name: 'Bodies',
-            type: 'bar',
-            stack: '总量',
-            label: {
-                normal: {
-                    show: true,
-                    position: 'insideRight'
-                }
-            },
-            data: [0,154,134,195,0,0,0,0,0,0,0,668,0,484,1426,1086,618,544,769,125,622,2525,865,2276,1853,404,1004,0]
-        },
-        {
-            name: 'Individuals',
-            type: 'bar',
-            stack: '总量',
-            label: {
-                normal: {
-                    show: true,
-                    position: 'insideRight'
-                }
-            },
-            data: [147,0,0,0,88185,6773,26008,11191,37423,9406,7371,0,13824,230,0,0,873,0,0,0,0,395,535,56,4874,11711,4539,431]
-        },
-    ]
-};
+    </script>
 
-    var myChart4 = echarts.init(document.getElementById('main4'));
-    myChart4.setOption(option);
+    <div class="row">
+        <br>   
+        <p3> Among the registered electors in geographical constituencies, New Territories West has the highest no. of registered electors (1,086,511).
+             Meanwhile, female voters slightly outnumber male voters by 3.8%.  </p3>  
+        <br>
+    </div>
+
+	<script type="text/javascript">
+    option = {
+          title : {
+              text: 'Distribution of registered electors by functional constituencies in 2016',
+              x:'center'
+            },
+            tooltip : {
+                trigger: 'axis',
+                axisPointer : {            
+                    type : 'shadow'        
+                }
+            },
+            legend: {
+                orient: 'vertical',
+                x: 'left',
+                padding: [10, 20,],
+                data: ['Bodies', 'Individuals']
+            },
+            grid: {
+                left: '3%',
+                right: '4%',
+                bottom: '3%',
+                containLabel: true
+            },
+            xAxis:  {
+                type: 'value'
+            },
+            yAxis: {
+                type: 'category',
+                data: ['Heung Yee Kuk', 'Agriculture and Fisheries', 'Insurance', 'Transport', 'Education', 'Legal', 'Accountancy', 'Medical',
+                'Health Services', 'Engineering', 'Architectural, Surveying, Planning and Landscape','Labour', 'Social Welfare', 
+                'Real Estate and Construction','Tourism', 'Commercial (First)', 'Commercial (Second)','Industrial (First)', 
+                'Industrial (Second)', 'Finance', 'Financial Services', 'Sports, Performing Arts, Culture and Publication', 'Import and Export',
+                'Textiles and Garment','Wholesale and Retail', 'Information Technology', 'Catering', 'District Council (First)' ]
+            },
+            series: [
+                {
+                    name: 'Bodies',
+                    type: 'bar',
+                    stack: '总量',
+                    label: {
+                        normal: {
+                            show: true,
+                            position: 'insideRight'
+                        }
+                    },
+                    data: [0,154,134,195,0,0,0,0,0,0,0,668,0,484,1426,1086,618,544,769,125,622,2525,865,2276,1853,404,1004,0]
+                },{
+                    name: 'Individuals',
+                    type: 'bar',
+                    stack: '总量',
+                    label: {
+                        normal: {
+                            show: true,
+                            position: 'insideRight'
+                        }
+                    },
+                    data: [147,0,0,0,88185,6773,26008,11191,37423,9406,7371,0,13824,230,0,0,873,0,0,0,0,395,535,56,4874,11711,4539,431]
+                },
+                ]
+            };
+            var myChart4 = echarts.init(document.getElementById('main4'));
+            myChart4.setOption(option);
     </script>
 	
-    <br>
-    <p4> Although there was a decrease of registered electors in functional constituencies, the total no. gradually rise back to 239,724 as the election approached.
-         Among the registered electors in functional constituencies,education sector has the highest no. of voters (88,185). The sector’s lawmaker said that although this may
-         be due to vote-rigging activities, he believed the increase in the number of voters was still a good thing. <p4>
-    <br>
-    <br>
-    <p5> Political scientist Dr Chung Kim-wah, of Polytechnic University’s Centre for Social Policy Studies, said Hong Kong people political engagment in election
+    <div class="row">
+        <br>
+        <p4> Although there was a decrease of registered electors in functional constituencies, the total no. gradually rise back to 239,724 as the
+             election approached.Among the registered electors in functional constituencies,education sector has the highest no. of voters (88,185). 
+             The sector’s lawmaker said that although this may be due to vote-rigging activities, he believed the increase in the number of voters 
+             was still a good thing. <p4>
+        <br>
+        <br>
+        <p5> Political scientist Dr Chung Kim-wah, of Polytechnic University’s Centre for Social Policy Studies, said Hong Kong people political engagment in election
          has risen as they have a stronger political indenity since the Occupy Movement in 2014. </p5>
-    <br>
-    <br>
-    <p6> “They now care about politics; want to devote themselves to social movements; and want to change the game rules,” Chung said. 
-    “But it remains to be seen whether their passion, and the trend [of the rising turnout], can be sustained.” </p6>
-	    
+        <br>
+        <br>
+        <p6> “They now care about politics; want to devote themselves to social movements; and want to change the game rules,” Chung said. 
+             “But it remains to be seen whether their passion, and the trend [of the rising turnout], can be sustained.” </p6>
+	</div>
 </body>
 </html>
