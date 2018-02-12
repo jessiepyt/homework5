@@ -3,13 +3,25 @@
 
 <head>
     <meta charset="utf-8">
-    <title>ECharts</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Jessie Pang">
+    <title>Post-Occupy surge in voters during Hong Kong’s 2016 Legco elections</title>
+
+    <!-- CSS -->
+    <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet" media="screen">
+    <link href="assets/css/simple-line-icons.css" rel="stylesheet" media="screen">
+    <link href="assets/css/animate.css" rel="stylesheet">
+
+    <!-- Custom styles CSS -->
+    <link href="assets/css/style.css" rel="stylesheet" media="screen">
+    <script src="assets/js/modernizr.custom.js"></script>
     <!-- Use echarts.js -->
     <script src="echarts.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <!-- Latest compiled and minified JavaScript -->
-    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
-    <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="keywords" content="My Skills Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
@@ -18,316 +30,356 @@
         addEventListener("load", function() {
             setTimeout(hideURLbar, 0);
         }, false);
+
         function hideURLbar() {
             window.scrollTo(0, 1);
         }
     </script>
-    <script src="js/jquery-1.11.1.min.js"></script>
-    <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-97015178-1', 'auto');
-  ga('send', 'pageview');
-
-    </script>
 </head>
 
 <body>
-  <div class="header-section">
-        <div class="continer">
-        <h1> Post-Occupy surge in voters during Hong Kong’s 2016 Legco elections </h1>
-        <h2> Hong Kong political engagment in Lego election continue to rise</h2>
-        <h3> By Jessie Pang </h3>
+
+    <section id="home" class="pfblock-image screen-height">
+        <div class="home-overlay"></div>
+        <div class="intro">
+            <div class="continer">
+                <h1> Post-Occupy surge in voters during Hong Kong’s 2016 Legco elections </h1>
+                <br>
+                <h2> Hong Kong political engagment in Lego election continue to rise</h2>
+                <br>
+                <h3> By Jessie Pang </h3>
+            </div>
         </div>
-  </div>
 
-  	<div class="row">
-          <div class="col-span-12"></div>
-	    <p1> According to the latest statistics in the data.gov.hk, there are now 3,779,085 registered electors in geographical constituencies,
-         a net increase of 312,884 electors since the last Legco lection in 2012. </p1>
-	    <br>
-	    <br>
-	    <p2> The Legco elections were the first since the pro-democracy Occupy protests in 2014, and returned six young lawmakers 
-        advocating self-determination for Hong Kong, including student activist Nathan Law Kwun-chung. </p2>
-	</div>
+        <a href="#intro">
+            <div class="scroll-down">
+                <span>
+                    <i class="fa fa-angle-down fa-2x"></i>
+                </span>
+            </div>
+        </a>
+    </section>
 
-   <div class="row">
-        <div class="col-md-2 col-md-offset-3">
-             <div id="main1" style="width: 700px;height:400px;"></div>
-             
-<script type="text/javascript">
-      option = {
-                    "title" : {
-                        "text": "No. of registered electors in 2007-2016",
-                        "x":"center"
+    <section class="pfblock pfblock-gray" id="intro">
+        <div class="container">
+            <div class="col-span-12">
+                <div class="row">
+                    <p1> According to the latest statistics in the data.gov.hk, there are now 3,779,085 registered electors in geographical constituencies, a net increase of 312,884 electors since the last Legco lection in 2012. </p1>
+                    <br>
+                    <br>
+                    <p2> The Legco elections were the first since the pro-democracy Occupy protests in 2014, and returned six young lawmakers advocating self-determination for Hong Kong, including student activist Nathan Law Kwun-chung. </p2>
+                </div>
+                <br>
+                <div id="main1" style="width:700px;height:400px"></div>
+
+                <script type="text/javascript">
+                    option = {
+                        "title": {
+                            "text": "No. of registered electors in 2007-2016",
+                            "x": "center"
+                        },
+                        "color": ["#ff3d3d", "#00a0e9"],
+                        "tooltip": {
+                            "trigger": "axis"
+                        },
+                        "legend": {
+                            "align": "left",
+                            "top": "20",
+                            "left": "0",
+                            "data": ["registered electors of Functional Constituencies", "registered electors of Geographical Constituencies"],
+                            "selected": {
+                                "registered electors of Functional Constituencies": "true",
+                                "registered electors of Geographical Constituencies": "true",
+                            }
+                        },
+                        "grid": {
+                            "left": "0",
+                            "right": "3%",
+                            "bottom": "3%",
+                            "top": "13%",
+                            "containLabel": "true"
+                        },
+                        "xAxis": {
+                            "type": "category",
+                            "boundaryGap": "false",
+                            "splitLine": {
+                                "show": "true",
+                                "lineStyle": {
+                                    "color": ["#b1b1b1"],
+                                    "type": "dashed"
+                                }
+                            },
+                            "data": ["2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016"]
+                        },
+                        "yAxis": {
+                            "splitLine": {
+                                "show": "true",
+                                "lineStyle": {
+                                    "color": ["#b1b1b1"],
+                                    "type": "dashed"
+                                }
+                            }
+                        },
+                        "series": [{
+                            "name": "registered electors of Functional Constituencies",
+                            "type": "line",
+                            "data": ["212825", "229861", "226591", "225639", "243142", "240735", "238022", "232677", "229441", "239724"],
+                            "label": {
+                                "normal": {
+                                    "show": "true",
+                                    "position": "top"
+                                }
+                            }
+                        }, {
+                            "name": "registered electors of Geographical Constituencies",
+                            "type": "line",
+                            "data": ["3295826", "3372007", "3373342", "3431592", "3560535", "3466201", "3471423", "3507786", "3693942", "3779085"],
+                            "label": {
+                                "normal": {
+                                    "show": "true",
+                                    "position": "top"
+                                }
+                            }
+                        }, ]
+                    };
+                    var myChart1 = echarts.init(document.getElementById('main1'));
+                    myChart1.setOption(option);
+                </script>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-span-12">
+                    <p3> Among the registered electors in geographical constituencies, New Territories West has the highest no. of registered electors (1,086,511). </p3>
+                </div>
+            </div>
+            <br>
+            <div id="main2" style="width: 700px;height:400px;"></div>
+
+            <script type="text/javascript">
+                option = {
+                    "title": {
+                        "text": "Distribution of registered electors by geographical constituencies in 2016",
+                        "x": "center"
                     },
-					"color": ["#ff3d3d", "#00a0e9"
-                    ],
-					"tooltip": {
-                        "trigger": "axis"
-					},
-					"legend": {
-					    "align": "left",
+                    "tooltip": {
+                        "trigger": "item",
+                        "formatter": "{a} <br/>{b} : {c} ({d}%)"
+                    },
+                    "legend": {
+                        "orient": "vertical",
+                        "align": "left",
                         "top": "20",
                         "left": "0",
-						"data":["registered electors of Functional Constituencies","registered electors of Geographical Constituencies"],
-						"selected": {
-							"registered electors of Functional Constituencies": "true",
-							"registered electors of Geographical Constituencies": "true",}
-					},
-					"grid": {
-						"left": "0",
-						"right": "3%",
-						"bottom": "3%",
-						"top":"13%",
-						"containLabel": "true"
-					},
-					"xAxis": {
-						"type": "category",
-						"boundaryGap": "false",
-						"splitLine":{
-			                "show": "true",
-			                "lineStyle":{
-			                    "color":["#b1b1b1"],
-			                    "type":"dashed"
-			                }
-			            },
-						"data": ["2007","2008","2009","2010","2011","2012","2013","2014","2015","2016"]
-					},
-					"yAxis": {
-						"splitLine":{
-			                "show": "true",
-			                "lineStyle":{
-			                    "color":["#b1b1b1"],
-			                    "type":"dashed"
-			                }
-			            }
-					},
-					"series": [
-						{
-							"name":"registered electors of Functional Constituencies",
-							"type":"line",
-							"data":["212825", "229861", "226591", "225639", "243142", "240735", "238022", "232677", "229441","239724"],
-							"label": {
-								"normal": {
-									"show": "true",
-									"position": "top"
-								}
-							}
-						},
-						{
-							"name":"registered electors of Geographical Constituencies",
-							"type":"line",
-							"data":["3295826","3372007","3373342","3431592","3560535","3466201","3471423","3507786","3693942","3779085"],
-							"label": {
-								"normal": {
-									"show": "true",
-									"position": "top"
-								}
-							}
-						},
-					]
-				};
-            var myChart1 = echarts.init(document.getElementById('main1'));
-            myChart1.setOption(option);
-	</script>
-	</div>  
-
-    <div class="row">
-        <div class="col-span-12"> 
-        <p3> Among the registered electors in geographical constituencies, New Territories West has the highest no. of registered electors 
-            (1,086,511). </p3>
-        </div>
-    </div>
-
-	<div class="row">
-    <div class="col-md-2 col-md-offset-3">
-        <div id="main2" style="width: 700px;height:400px;"></div>
-
-    <script type="text/javascript">
-      option = {
-          "title" : {
-              "text": "Distribution of registered electors by geographical constituencies in 2016",
-              "x":"center"
-            },
-            "tooltip" : {
-                "trigger": "item",
-                "formatter": "{a} <br/>{b} : {c} ({d}%)"
-            },
-            "legend": {
-                "orient": "vertical",
-                "align": "left",
-                "top": "20",
-                "left": "0",
-                "data": ["Hong Kong Island","Kowloon West","Kowloon East","New Territories West","New Territories East"]
-            },
-            "series" : [
-                {
-                    "name": "Geographical Constituency",
-                    "type": "pie",
-                    "radius" : "55%",
-                    "center": ["50%", "60%"],
-                    "data":[
-                        {"value":"627807", "name":"Hong Kong Island"},
-                        {"value":"488129", "name":"Kowloon West"},
-                        {"value":"601567", "name":"Kowloon East"},
-                        {"value":"1086511", "name":"New Territories West"},
-                        {"value":"975071", "name":"New Territories East"}
-                        ],
+                        "data": ["Hong Kong Island", "Kowloon West", "Kowloon East", "New Territories West", "New Territories East"]
+                    },
+                    "series": [{
+                        "name": "Geographical Constituency",
+                        "type": "pie",
+                        "radius": "55%",
+                        "center": ["50%", "60%"],
+                        "data": [{
+                            "value": "627807",
+                            "name": "Hong Kong Island"
+                        }, {
+                            "value": "488129",
+                            "name": "Kowloon West"
+                        }, {
+                            "value": "601567",
+                            "name": "Kowloon East"
+                        }, {
+                            "value": "1086511",
+                            "name": "New Territories West"
+                        }, {
+                            "value": "975071",
+                            "name": "New Territories East"
+                        }],
                         "itemStyle": {
                             "emphasis": {
                                 "shadowBlur": "10",
                                 "shadowOffsetX": "0",
                                 "shadowColor": 'rgba(0, 0, 0, 0.5)'
-                            }  
+                            }
                         }
-                    }
-                ]
-            };
-            var myChart2 = echarts.init(document.getElementById('main2'));
-            myChart2.setOption(option);
-    </script>
-    </div>
+                    }]
+                };
+                var myChart2 = echarts.init(document.getElementById('main2'));
+                myChart2.setOption(option);
+            </script>
+            <br>
 
-    <div class="row">
-        <div class="col-span-12"> 
-        <p4> Meanwhile, female voters slightly outnumber male voters by 3.8%.  </p4>  
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-md-2 col-md-offset-3">
-              <div id="main3" style="width: 700px;height:400px;"></div>
-   
-    <script type="text/javascript">
-    $(function() {
-        $.getJSON('option.json', function(data) {
-            var option = data;  
-            var myChart3 = echarts.init(document.getElementById('main3'));
-            myChart3.setOption(option);
-            })
-        });    
-    </script>
-    </div>
-
-    <div class="row">
-        <div class="col-span-12">
-        <p5> Although there was a decrease of registered electors in functional constituencies, the total no. gradually rise back to 239,724 as the
-             election approached.Among the registered electors in functional constituencies,education sector has the highest no. of voters (88,185). 
-             The sector’s lawmaker said that although this may be due to vote-rigging activities, he believed the increase in the number of voters 
-             was still a good thing. <p5>
-        </div>
-    </div>
-
-
-    <div class="row">
-        <div class="col-md-2 col-md-offset-3">
+            <div class="col-span-12">
+                <p5> Although there was a decrease of registered electors in functional constituencies, the total no. gradually rise back to 239,724 as the election approached.Among the registered electors in functional constituencies,education sector has
+                    the highest no. of voters (88,185). The sector’s lawmaker said that although this may be due to vote-rigging activities, he believed the increase in the number of voters was still a good thing.
+                </p5>
+            </div>
+            <br>
             <div id="main4" style="width: 900px;height:750px;"></div>
-            
+
             <script type="text/javascript">
-    
-    option = {
-          title : {
-              text: 'Distribution of registered electors by functional constituencies in 2016',
-              x:'center'
-            },
-            tooltip : {
-                trigger: 'axis',
-                axisPointer : {            
-                    type : 'shadow'        
-                }
-            },
-            legend: {
-                x: 'left',
-                orient:'vertical',
-                top: '20',
-                left: '0',
-                data: ['Bodies', 'Individuals']
-            },
-            grid: {
-                left: '0%',
-                right: '5%',
-                bottom: '10%',
-                containLabel: true
-            },
-            xAxis:  {
-                type: 'value'
-            },
-            yAxis: {
-                type: 'category',
-                data: ['Heung Yee Kuk', 'Agriculture and Fisheries', 'Insurance', 'Transport', 'Education', 'Legal', 'Accountancy', 'Medical',
-                'Health Services', 'Engineering', 'Architectural, Surveying, Planning and Landscape','Labour', 'Social Welfare', 
-                'Real Estate and Construction','Tourism', 'Commercial (First)', 'Commercial (Second)','Industrial (First)', 
-                'Industrial (Second)', 'Finance', 'Financial Services', 'Sports, Performing Arts, Culture and Publication', 'Import and Export',
-                'Textiles and Garment','Wholesale and Retail', 'Information Technology', 'Catering', 'District Council (First)' ],
-                axisLabel:{
-                    textStyle:{
-                        fontSize:12,
+                option = {
+                    title: {
+                        text: 'Distribution of registered electors by functional constituencies in 2016',
+                        x: 'center'
                     },
-                },
-            },
-            series: [
-                {
-                    name: 'Bodies',
-                    type: 'bar',
-                    stack: '总量',
-                    label: {
-                        normal: {
-                            show: true,
-                            position: 'insideRight'
+                    tooltip: {
+                        trigger: 'axis',
+                        axisPointer: {
+                            type: 'shadow'
                         }
                     },
-                    data: [0,154,134,195,0,0,0,0,0,0,0,668,0,484,1426,1086,618,544,769,125,622,2525,865,2276,1853,404,1004,0],
-                    axisLabel:{
-                    textStyle:{
-                        fontSize:5,
+                    legend: {
+                        x: 'left',
+                        orient: 'vertical',
+                        top: '20',
+                        left: '0',
+                        data: ['Bodies', 'Individuals']
                     },
-                },
-                },{
-                    name: 'Individuals',
-                    type: 'bar',
-                    stack: '总量',
-                    label: {
-                        normal: {
-                            show: true,
-                            position: 'insideRight'
-                        }
+                    grid: {
+                        left: '0%',
+                        right: '5%',
+                        bottom: '10%',
+                        containLabel: true
                     },
-                    data: [147,0,0,0,88185,6773,26008,11191,37423,9406,7371,0,13824,230,0,0,873,0,0,0,0,395,535,56,4874,11711,4539,431],
-                    axisLabel:{
-                        textStyle:{
-                            fontSize:5,
+                    xAxis: {
+                        type: 'value'
                     },
-                    },
-                    "markPoint":{
-                        "data":[
-                            {
-                                "type":"max",
-                                "name":"Maximum",
-                                "symbolRotate":"-90"
+                    yAxis: {
+                        type: 'category',
+                        data: ['Heung Yee Kuk', 'Agriculture and Fisheries', 'Insurance', 'Transport', 'Education', 'Legal', 'Accountancy', 'Medical',
+                            'Health Services', 'Engineering', 'Architectural, Surveying, Planning and Landscape', 'Labour', 'Social Welfare',
+                            'Real Estate and Construction', 'Tourism', 'Commercial (First)', 'Commercial (Second)', 'Industrial (First)',
+                            'Industrial (Second)', 'Finance', 'Financial Services', 'Sports, Performing Arts, Culture and Publication', 'Import and Export',
+                            'Textiles and Garment', 'Wholesale and Retail', 'Information Technology', 'Catering', 'District Council (First)'
+                        ],
+                        axisLabel: {
+                            textStyle: {
+                                fontSize: 12,
                             },
-                            ],
                         },
-                },
-              ],
+                    },
+                    series: [{
+                        name: 'Bodies',
+                        type: 'bar',
+                        stack: '总量',
+                        label: {
+                            normal: {
+                                show: true,
+                                position: 'insideRight'
+                            }
+                        },
+                        data: [0, 154, 134, 195, 0, 0, 0, 0, 0, 0, 0, 668, 0, 484, 1426, 1086, 618, 544, 769, 125, 622, 2525, 865, 2276, 1853, 404, 1004, 0],
+                        axisLabel: {
+                            textStyle: {
+                                fontSize: 5,
+                            },
+                        },
+                    }, {
+                        name: 'Individuals',
+                        type: 'bar',
+                        stack: '总量',
+                        label: {
+                            normal: {
+                                show: true,
+                                position: 'insideRight'
+                            }
+                        },
+                        data: [147, 0, 0, 0, 88185, 6773, 26008, 11191, 37423, 9406, 7371, 0, 13824, 230, 0, 0, 873, 0, 0, 0, 0, 395, 535, 56, 4874, 11711, 4539, 431],
+                        axisLabel: {
+                            textStyle: {
+                                fontSize: 5,
+                            },
+                        },
+                        "markPoint": {
+                            "data": [{
+                                "type": "max",
+                                "name": "Maximum",
+                                "symbolRotate": "-90"
+                            }, ],
+                        },
+                    }, ],
+                };
+                var myChart4 = echarts.init(document.getElementById('main4'));
+                myChart4.setOption(option);
+            </script>
+
+            <div class="col-span-12">
+                <p6> Political scientist Dr Chung Kim-wah, of Polytechnic University’s Centre for Social Policy Studies, said Hong Kong people political engagment in election has risen as they have a stronger political indenity since the Occupy Movement in
+                    2014.
+                </p6>
+                <br>
+                <br>
+                <p7> “They now care about politics; want to devote themselves to social movements; and want to change the game rules,” Chung said. “But it remains to be seen whether their passion, and the trend [of the rising turnout], can be sustained.”
+                </p7>
+            </div>
+        </div>
+    </section>
+
+    <div class="scroll-up">
+        <a href="#home"><i class="fa fa-angle-up"></i></a>
+    </div>
+
+    <!-- Scroll to top end-->
+
+    <!-- Javascript files -->
+    <style>
+        .async-hide {
+            opacity: 0 !important
+        }
+    </style>
+    <style>
+        .rpic img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border-width: 5px;
+            border-style: solid;
+        }
+    </style>
+    <script>
+        (function(a, s, y, n, c, h, i, d, e) {
+            s.className += ' ' + y;
+            h.start = 1 * new Date;
+            h.end = i = function() {
+                s.className = s.className.replace(RegExp(' ?' + y), '')
             };
-            var myChart4 = echarts.init(document.getElementById('main4'));
-            myChart4.setOption(option);
+            (a[n] = a[n] || []).hide = h;
+            setTimeout(function() {
+                i();
+                h.end = null
+            }, c);
+            h.timeout = c;
+        })(window, document.documentElement, 'async-hide', 'dataLayer', 4000, {
+            'GTM-WGQPS3F': true
+        });
     </script>
-        </div>
-	
- <div class="row">
-        <div class="col-span-12">
-        <p6> Political scientist Dr Chung Kim-wah, of Polytechnic University’s Centre for Social Policy Studies, said Hong Kong people 
-            political engagment in election has risen as they have a stronger political indenity since the Occupy Movement in 2014. </p6>
-        <br>
-        <br>
-        <p7> “They now care about politics; want to devote themselves to social movements; and want to change the game rules,” Chung said. 
-             “But it remains to be seen whether their passion, and the trend [of the rising turnout], can be sustained.” </p7>
-        </div>
- </div>
+    <script>
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-97015178-1', 'auto');
+        ga('require', 'GTM-WGQPS3F');
+        ga('send', 'pageview');
+    </script>
+    <script src="assets/js/jquery-1.11.1.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/jquery.parallax-1.1.3.js"></script>
+    <script src="assets/js/imagesloaded.pkgd.js"></script>
+    <script src="assets/js/jquery.sticky.js"></script>
+    <script src="assets/js/smoothscroll.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/jquery.easypiechart.js"></script>
+    <script src="assets/js/waypoints.min.js"></script>
+    <script src="assets/js/jquery.cbpQTRotator.js"></script>
+    <script src="assets/js/custom.js"></script>
 </body>
+
 </html>
